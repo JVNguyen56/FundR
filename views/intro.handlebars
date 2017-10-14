@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FundR App</title>
+   
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body>
+    <!--header-->
+    <header class="main-header2" id="header">
+        <div class="bg-color">
+            <!--nav-->
+            <nav class="nav navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                            <a href="#" class="navbar-brand">FundR</a>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+                        
+
+                                {{!-- <form id="signin" name="signin" method="post" action="signin">
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="text" />
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+        <input class="btn" type="submit" value="Sign In" />
+    </form> --}}
+ 
+
+                            <ul class="nav navbar-nav navbar-right">
+                               
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                          <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                               <div class="row">
+                                  <div class="col-md-12">
+                                  <div id="signUpAlert" class="top text-center">
+                                    Login Area
+                                  </div>
+                                     <form method="post" action="signin" class="form " role="form" id="login-nav">
+                                        <div class="form-group">
+                                           <input name="email" type="email" class="form-control loginForm" id="txtEmail" placeholder="Email address" required>
+                                        </div>
+                                        <div class="form-group">
+                                           <input name="password" type="password" class="form-control loginForm" id="txtPassword" placeholder="Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                           <button type="btnLogin" id="btnLogin" class="btn btn-primary btn-block">Log In</button>
+                                           <button type="btnLogOut" id="btnLogOut" class="btn btn-warning btn-block hide">Log Out</button> 
+                                        </div>
+                                       
+                                     </form>
+                                  </div>
+                                  <div class="bottom text-center loginForm">
+                                    New here ? <button id="btnSignUp" class="btn btn-sm btn-success">Sign Up</button> 
+                                  </div>
+                               </div>
+                            </li>
+                          </ul>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!--/ nav-->
+            <div class="container text-center">
+                <div class="wrapper wow fadeInUp delay-05s" >
+                    <h2 class="top-title">TRIP GO FundR</h2>
+                    <h3 class="title">FundR</h3>
+                    <h4 class="sub-title">"Go Fund Yourself!"</h4>
+                    <h2> Login or Sign-up to start using FundR </h2>
+                    {{#if error}}
+                        <br>
+                        <div class="alert alert-danger">{{error}}</div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="feature" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 wow fadeInLeft delay-05s">
+                    <div class="section-title">
+                        <h2 class="head-title">How it Works</h2>
+                        <hr class="botm-line">
+                        <p class="sec-para">The best way to start planning a trip is to figure out what you need and how to fund it.</p>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="col-md-6 wow fadeInRight delay-02s">
+                        <div class="icon">
+                            <i class="fa fa-check-square-o"></i>
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="txt-tl">Your Trip Necessities?</h3>
+                            <p class="txt-para">Set your goals for the funds or items you need for your next trip. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRight delay-02s">
+                        <div class="icon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="txt-tl">When is your trip?</h3>
+                            <p class="txt-para">Set the deadline for the when the funds/items are needed for your trip. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRight delay-04s">
+                        <div class="icon">
+                            <i class="fa fa-user-circle"></i>
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="txt-tl">Who is going?</h3>
+                            <p class="txt-para">Send this FundR account to those participating in the trip. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRight delay-04s">
+                        <div class="icon">
+                            <i class="fa fa-dollar"></i> 
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="txt-tl">Pledge</h3>
+                            <p class="txt-para">Have everyone participate by contributing to your list of funds or items. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRight delay-06s">
+                        <div class="icon">
+                            <i class="fa fa-plane"></i> 
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="txt-tl">Go on your trip</h3>
+                            <p class="txt-para">Once your goals have been attained you, will be on your way to your destination and have fun! </p>
+                        </div>
+                    </div>
+                     <div class="col-md-6 wow fadeInRight delay-06s">
+                        <div class="icon">
+                            <i class="fa fa-sign-in"></i> 
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="txt-tl">Sign-up or Login</h3>
+                            <p class="txt-para">Sign-up or Login to start or access your go FundR account! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <footer class="" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 footer-copyright">
+                    © Fundr - 2017 All rights reserved
+                    <div class="credits">
+                     
+                        Designed by The Blue Team
+                    </div>
+                </div>
+                <div class="col-sm-5 footer-social">
+                    <div class="pull-right hidden-xs hidden-sm">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-snapchat"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!---->
+    <!--contact ends-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/custom.js"></script>
+    {{!-- <script src="js/contactform.js"></script> --}}
+
+    <script type="text/javascript">
+        var btnSignUp = $("#btnSignUp");
+
+        btnSignUp.bind("click", function(event) {
+            event.preventDefault();
+            window.location.href = "/signup";
+        })
+    </script>
+    
+  </body>
+</html>

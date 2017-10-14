@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FundR User Signup</title>
+
+    <!-- Bootstrap Core CSS -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/table.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('/assets/img/passport.jpg')">
+        <div class="container overlay">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+                    <div class="page-heading">
+                        <h1>FundR User Signup</h1>
+                        <hr class="small">
+                        <span class="subheading">Create your new FundR User Account!</span>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="container">
+    <div class="row">
+        <h2>Creating your FundR User Account</h2>
+        <p class="lead">
+            Please fill out the form below <br />
+           </p>
+
+        <hr/>
+        {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+        {{/if}}
+        <div class="row">
+            <div class="col-sm-8">
+
+                <h4 class="page-header">New User Information</h4>
+    <form id="signup" name="signup" method="post" action="/signup" role="form">
+    <div class="form-group float-label-control">
+        <label for="email">Email Address</label>
+        </br >
+        <input class="form-control" name="email" type="email" placeholder="Email" />
+        </br>
+        <label for="firstname">First Name</label>
+        </br>
+        <input name="firstname" type="text" class="form-control" placeholder="First Name"/>
+        </br>
+          <label for="lastname">Last Name</label>
+        </br>
+        <input name="lastname" type="text" class="form-control" placeholder="Last Name"/>
+        </br>
+         <label for="password">Password</label>
+        </br>
+        <input name="password" type="password" class="form-control" placeholder="Password"/>
+        </br>
+        <input class="btn-success btn-submit" type="submit" value="Sign Up" />
+    </form>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+               
+                    <p class="copyright text-muted">&copy; 2017 <a href="#">FundR</a>
+                        We <i class="fa fa-heart"></i> <a href="#">FundR</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    {{!-- <!-- Custom Theme JavaScript -->
+    <script src="js/small-business.min.js"></script> --}}
+
+    <!-- Smooth Scroll -->
+    <script src="js/SmoothScroll.js"></script>
+</body>
+
+</html>
